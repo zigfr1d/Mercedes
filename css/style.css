@@ -1,0 +1,117 @@
+body{
+    margin: 0 auto;
+    padding: 0px;
+    background: black;
+}
+.bar{
+    width: 100%;
+    min-height: 160px;
+    background: black;
+    float: left;
+}
+.logo{
+    width: 40%;
+    min-height: inherit;
+    background: black;
+    object-fit: cover;
+    float: left;
+}
+.menu{
+    width: 60%;
+    min-height: inherit;
+    background: black;
+    display: flex;
+    justify-content: center;
+    float: left;
+}
+.logo img{
+    width: 100%;
+    height: 140px;
+    float: left;
+}
+.menu ul{
+    margin: 20px 0px;
+    padding: 0px;
+    color: white;
+}
+.menu ul li{
+    list-style-type: none;
+    padding: 20px;
+    margin: 0px 10px;
+    font-size: 30px;
+    border: 5px double transparent;
+    float: left;
+    box-sizing: border-box;
+}
+.menu ul li:hover{
+    color: bisque;
+    cursor: pointer;
+    border-bottom: 5px double bisque;
+    border-top: 5px double bisque;
+    transition: 0.8s;
+}
+.kartina img{
+    width: 100%;
+}
+.middle{
+    padding: 0;
+    margin: 0;
+}
+.middle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #d8e2ec;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: black;
+    overflow: hidden;
+    position: relative;
+
+}
+.btn i{
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+.btn:hover i{
+    transform: scale(1.3);
+    color: grey;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #0f595e;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+.btn:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+
+@keyframes aaa {
+    0%{
+        left: -110%;
+        top: 90%;
+    }50%{
+        left: 10%;
+        top: -30%;
+    }100%{
+        top: -10%;
+        left: -10%;
+    }
+}
